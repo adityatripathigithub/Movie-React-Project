@@ -1,8 +1,14 @@
-import React from 'react'
+import { Route, Routes } from "react-router-dom"
+import Home from "./components/Home"
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className="bg-[#070b00] w-screen h-screen flex">
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+
+    </div>
   )
 }
 
