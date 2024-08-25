@@ -1,3 +1,5 @@
+import axios from "axios";
+import { Axios } from "../../utils/axios";
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -5,7 +7,15 @@ const Topnav = () => {
 
     const [query, setquery] = useState("");
 
-    console.log(query);
+    const GetSearches = async () => {
+        try {
+            const d = await axios.get(``);
+            console.log(d);
+        } catch (error) {
+            console.log("Error: ", error);
+        }
+    };
+
 
     return (
         <div className='w-full h-[10vh] relative flex justify-start ml-[15%] items-center'>
@@ -19,8 +29,8 @@ const Topnav = () => {
                 placeholder='Scearch Anythings'
             />
             {query.length > 0 &&
-                <i onClick={()=> setquery("")}
-                 className="cursor-pointer text-zinc-400 text-3xl ri-close-fill"></i>
+                <i onClick={() => setquery("")}
+                    className="cursor-pointer text-zinc-400 text-3xl ri-close-fill"></i>
             }
 
 
@@ -30,7 +40,7 @@ const Topnav = () => {
                     <img src="" alt="" />
                     <span>hello everyone</span>
                 </Link> */}
-                
+
             </div>
         </div>
     )

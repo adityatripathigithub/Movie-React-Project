@@ -1,7 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Sidenave = () => {
+
+const Sidenav = () => {
+
     return (
         <div className='w-[20%] h-full border-r-2 border-zinc-500 p-10'>
             <h1 className='text-white font-bold text-2xl' >
@@ -55,4 +57,4 @@ const Sidenave = () => {
     )
 }
 
-export default Sidenave
+export default Sidenav
