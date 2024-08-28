@@ -1,6 +1,5 @@
-import axios from "axios";
-import { Axios } from "../../utils/axios";
-import React, { useState } from 'react'
+import axios  from "../../utils/axios";
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Topnav = () => {
@@ -9,12 +8,15 @@ const Topnav = () => {
 
     const GetSearches = async () => {
         try {
-            const d = await axios.get(``);
+            const d = await axios.get(`/trending/all/day`);
             console.log(d);
         } catch (error) {
             console.log("Error: ", error);
         }
     };
+    useEffect(()=>{
+        GetSearches();
+    },[])
 
 
     return (
