@@ -7,3 +7,5 @@ const instance = axios.create({
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYzkyMmI4NzUxNjdiMTZjMDk4ZmZjMjRjZWJkNjA0NCIsIm5iZiI6MTcyNDU4MDMxNi43MTMwNDMsInN1YiI6IjY2YzhhYzA0ZTMwOTE3YWExMGIzMDRiMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SZJOUaqyRgD8XMzkryOJ9dVHfy9rtGu_48ZkjGVuAJ0'
     }
 })
+
+export default instance
