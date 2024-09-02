@@ -1,20 +1,27 @@
 import { data } from "autoprefixer";
 import React from "react";
+import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
 
-const HorizontalCards = ({data}) => {
+const HorizontalCards = ({ data}) => {
+    console.log(data);
+    
     return (
-        <div className="w-[115%] h-[40vh] p-5">
-            <div className="mb-5 ">
-                <h1 className=" text-3xl font-semibold text-zinc-400 "> Tranding</h1>
-            </div>
+        <div className="w-[100%] flex  overflow-y-hidden mb-5 ">
+            {data.map((d, i) => (
+                <div key={i} className="min-w-[15%] bg-zinc-900 mr-5 mb-5">
+                    <img className="w-full h-[55%] object-cover" src={`https://image.tmdb.org/t/p/original${d.backdrop_path || d.poster_path}`} alt="" />
 
-            <div className="w-full flex  overflow-x-auto">
-                {data.map((d, i) => (
-                    <div key={i} className="w-[15%] bg-red-100 mr-5">
-                        {d.title || d.name || d.original_name || d.orignal_title}
+                    <div className="text-white p-3 h-[45%]">
+                        <h1 className=" text-xl font-semibold text-white">{d.original_name || d.name || d.title || d.original_title}</h1>
+
+                        <p>
+                            {d.overview.slice(0, 50)}
+                            ...<span className="text-blue-400">more</span>{" "}
+                        </p>
                     </div>
-                ))}
-            </div>
+                </div>
+            ))}
         </div>
     );
 };

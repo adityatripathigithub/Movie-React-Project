@@ -6,7 +6,7 @@ import noimage from "/noimage.webp";
 const Topnav = () => {
     const [query, setquery] = useState("");
 
-    const [searches, setsearches] = useState(null);
+    const [searches, setsearches] = useState([]);
 
     console.log(searches);
 
