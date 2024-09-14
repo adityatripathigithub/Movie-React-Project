@@ -14,10 +14,14 @@ const People = () => {
     const [page, setpage] = useState(1);
     const [haseMore, sethaseMore] = useState(true);
     document.title = "person";
+    console.log(page);
+    
 
     const GetPerson = async () => {
         try {
-            const { data } = await axios.get(`https://api.thepersondb.org/3/person/${category}?page=${page}`);
+            const { data } = await axios.get(`/person/${category}?page=${page}`);
+            
+            
 
             if (data.results.length > 0) {
                 setperson((prevstate) => [...prevstate, ...data.results]);
@@ -26,7 +30,7 @@ const People = () => {
                 sethaseperson(false);
             }
         } catch (error) {
-            console.log("Error: ", error);
+            console.log( error);
         }
     };
 

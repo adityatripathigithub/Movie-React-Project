@@ -38,11 +38,11 @@ const Sidenav = () => {
             <nav className="flex flex-col text-zinc-400 text-xl gap-3">
                 <h1 className="text-white font-semibold text-xl mt-10 mb-5">Website Information</h1>
 
-                <Link className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-la ">
+                <Link to="/about" className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-la ">
                     <i class=" mr-2 ri-information-fill"></i> About
                 </Link>
 
-                <Link className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-la ">
+                <Link to="/contect" className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-la ">
                     <i class=" mr-2 ri-phone-fill"></i> Contect Us
                 </Link>
             </nav>
