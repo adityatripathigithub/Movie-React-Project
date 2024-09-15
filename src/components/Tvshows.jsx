@@ -17,7 +17,7 @@ const Tvshows = () => {
 
     const GetTv = async () => {
         try {
-            const { data } = await axios.get(`https://api.thetvdb.org/3/tv/${category}?page=${page}`);
+            const { data } = await axios.get(`tv/${category}?page=${page}`);
 
             if (data.results.length > 0) {
                 settv((prevstate) => [...prevstate, ...data.results]);
@@ -58,7 +58,7 @@ const Tvshows = () => {
             </div>
 
             <InfiniteScroll dataLength={tv.length} next={GetTv} hasMore={haseMore} loader={<h1>Loading...</h1>}>
-                <Cards data={tv} title={category} />
+                <Cards data={tv} title="tv" />
             </InfiniteScroll>
         </div>
     ) : (
