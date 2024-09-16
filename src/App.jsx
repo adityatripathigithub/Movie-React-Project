@@ -10,6 +10,7 @@ import Contect from "./components/Contect";
 import Moviedetails from "./components/Moviedetails";
 import TvDetails from "./components/TvDetails";
 import PersonDetails from "./components/PersonDetails";
+import Trailer from "./components/partials/Trailer";
 
 const App = () => {
     return (
@@ -19,18 +20,16 @@ const App = () => {
                 <Route path="/tranding" element={<Tranding />} />
                 <Route path="/popular" element={<Populer />} />
 
-                <Route path="/movie" element={<Movie />}>
-                    <Route path="/movie/details/:id" element={<Moviedetails />} />
+                <Route path="/movie" element={<Movie />} />
+                <Route path="/movie/details/:id" element={<Moviedetails />}>
+                    <Route path="/movie/details/:id/trailer" element={<Trailer />} />
                 </Route>
 
-                <Route path="/tvshows" element={<Tvshows />}>
-                <Route path="/tvshows/details/:id" element={<TvDetails />} />
-                
-                </Route>
-                <Route path="/person" element={<People />}>
+                <Route path="/tv" element={<Tvshows />} />
+                <Route path="/tv/details/:id" element={<TvDetails />} />
+
+                <Route path="/person" element={<People />} />
                 <Route path="/person/details/:id" element={<PersonDetails />} />
-                
-                </Route>
 
                 <Route path="/about" element={<About />} />
                 <Route path="/contect" element={<Contect />} />
@@ -40,3 +39,4 @@ const App = () => {
 };
 
 export default App;
+

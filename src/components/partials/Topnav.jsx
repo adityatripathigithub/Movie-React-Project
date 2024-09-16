@@ -34,7 +34,7 @@ const Topnav = () => {
             {searches && (
                 <div className="z-[100] absolute w-[50%] max-h-[50vh] bg-zinc-200 top-[100%] left-[8%] overflow-auto rounded">
                     {searches.map((s, i) => (
-                        <Link key={i} className="hover:text-black hover:bg-zinc-300 duration-300 text-zinc-600 font-semibold w-[100%] p-10 flex justify-stert items-center border-b-2 border-zinc-100">
+                        <Link to={`/${s.media_type}/details/${s.id}`} key={i} className="hover:text-black hover:bg-zinc-300 duration-300 text-zinc-600 font-semibold w-[100%] p-10 flex justify-stert items-center border-b-2 border-zinc-100">
                             <img className="w-[10vh] h-[12vh] object-cover rounded mr-5 shadow-lg" src={s.backdrop_path || s.profile_path ? `https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}` : noimage} alt="" />
                             <span className="text-xl ">{s.original_name || s.name || s.title || s.original_title}</span>
                         </Link>

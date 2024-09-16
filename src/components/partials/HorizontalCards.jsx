@@ -9,10 +9,13 @@ const HorizontalCards = ({ data}) => {
     return (
         <div className="w-[100%] flex  overflow-y-hidden mb-5 ">
             {data.map((d, i) => (
-                <div key={i} className="min-w-[15%] bg-zinc-900 mr-5 mb-5">
+                <Link to={`/${d.media_type}/details/${d.id}`} key={i}
+
+                className="min-w-[15%] h-[45vh] bg-zinc-900 mr-5 mb-5">
+
                     <img className="w-full h-[55%] object-cover" src={`https://image.tmdb.org/t/p/original${d.backdrop_path || d.poster_path}`} alt="" />
 
-                    <div className="text-white p-3 h-[45%]">
+                    <div className="text-white p-3 h-[45%] overflow-y-auto">
                         <h1 className=" text-xl font-semibold text-white">{d.original_name || d.name || d.title || d.original_title}</h1>
 
                         <p>
@@ -20,7 +23,7 @@ const HorizontalCards = ({ data}) => {
                             ...<span className="text-blue-400">more</span>{" "}
                         </p>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );
