@@ -23,7 +23,7 @@ const Moviedetails = () => {
     return info ? (
         <div
             style={{ background: `linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5),rgba(0,0,0,.9)), url(https://image.tmdb.org/t/p/original/${info?.detail?.backdrop_path})`, backgroundPosition: "top-10", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}
-            className="relative w-screen h-[165vh] px-[10%]"
+            className="relative w-screen min-h-[170vh] px-[10%]"
         >
             {/* {Part 1 navigation} */}
 
@@ -85,8 +85,8 @@ const Moviedetails = () => {
                 {info.watchproviders && info.watchproviders.flatrate && (
                     <div className="flex items-center gap-x-10 text-white">
                         <h1>Available On Platform</h1>
-                        {info.watchproviders.flatrate.map((w) => (
-                            <img title={w.provider_name} className="w-[7vh] h-[7vh] object-cover rounded-md" src={`https://image.tmdb.org/t/p/original/${w.logo_path}`} alt="" />
+                        {info.watchproviders.flatrate.map((w, i) => (
+                            <img kay={i} title={w.provider_name} className="w-[7vh] h-[7vh] object-cover rounded-md" src={`https://image.tmdb.org/t/p/original/${w.logo_path}`} alt="" />
                         ))}
                     </div>
                 )}
@@ -94,16 +94,16 @@ const Moviedetails = () => {
                 {info.watchproviders && info.watchproviders.rent && (
                     <div className="flex items-center gap-x-10 text-white">
                         <h1>Available On Rent</h1>
-                        {info.watchproviders.rent.map((w) => (
-                            <img title={w.provider_name} className="w-[7vh] h-[7vh] object-cover rounded-md" src={`https://image.tmdb.org/t/p/original/${w.logo_path}`} alt="" />
+                        {info.watchproviders.rent.map((w, i) => (
+                            <img kay={i} title={w.provider_name} className="w-[7vh] h-[7vh] object-cover rounded-md" src={`https://image.tmdb.org/t/p/original/${w.logo_path}`} alt="" />
                         ))}
                     </div>
                 )}
                 {info.watchproviders && info.watchproviders.buy && (
                     <div className="flex items-center gap-x-10 mb-5 text-white">
                         <h1>Available To Buy</h1>
-                        {info.watchproviders.buy.map((w) => (
-                            <img title={w.provider_name} className="w-[7vh] h-[7vh] object-cover rounded-md" src={`https://image.tmdb.org/t/p/original/${w.logo_path}`} alt="" />
+                        {info.watchproviders.buy.map((w, i) => (
+                            <img kay={i} title={w.provider_name} className="w-[7vh] h-[7vh] object-cover rounded-md" src={`https://image.tmdb.org/t/p/original/${w.logo_path}`} alt="" />
                         ))}
                     </div>
                 )}
@@ -111,9 +111,9 @@ const Moviedetails = () => {
 
             {/* Part 4 Recommendation and Similar */}
 
-            <hr className="mt-5 mb-5 border-none h-[2px] bg-zinc-500" />
+            <hr className="mt-5 mb-2 border-none h-[2px] bg-zinc-500" />
 
-            <h1 className="text-3xl font-bold text-white ">Recommendation & Similar Stuff</h1>
+            <h1 className="text-3xl font-bold text-white mb-3 ">Recommendation & Similar Stuff</h1>
 
             <HorizontalCards data={info.recommendations.length > 0 ? info.recommendations : info.similar} />
 

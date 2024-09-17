@@ -11,7 +11,6 @@ const Home = () => {
     // document.title = "SCSDB | Homepage";
 
     const [wallpaper, setwallpaper] = useState(null);
-    console.log(wallpaper);
     
     const [tranding, settranding] = useState([]);
     const [category, setcategory] = useState("all");
@@ -19,7 +18,6 @@ const Home = () => {
     
 
     const GetHeaderwallpaper = async () => {
-        console.log("inside h");
         
         try {
             const { data } = await axios.get('https://api.themoviedb.org/3/trending/all/day');
@@ -46,7 +44,6 @@ const Home = () => {
         }
     };
  useEffect(()=>{
-    console.log("dsfjks");
         Gettranding();
         !wallpaper && GetHeaderwallpaper();
     
