@@ -4,11 +4,14 @@ import { asynceloadetv, removetv } from "../store/actions/tvActions";
 import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import HorizontalCards from "./partials/HorizontalCards";
 import Loding from "./Loding";
+import { loadtv } from "../store/redusers/tvSlice";
 
 const TvDetails = () => {
     const { pathname } = useLocation();
     const navigate = useNavigate();
     const { id } = useParams();
+    console.log(id);
+
     const { info } = useSelector((state) => state.tv);
     const dispatch = useDispatch();
     console.log(info);
@@ -115,7 +118,7 @@ const TvDetails = () => {
             <h1 className="text-3xl font-bold text-white mb-3 ">Seasons</h1>
 
             <div className="w-[100%] flex  overflow-y-hidden mb-5">
-                {info.seasons.length > 0 ? (
+                {/* {info.seasons.length > 0 ? (
                     info.seasons.map((s, i) => (
                         <div className="w-[15vh] mr-[10%]">
                             <img className=" shadow-[8px_17px_38px_2px_rgba(0,0,0.5)] min-w-[14vw] h-[30vh] object-cover " src={`https://image.tmdb.org/t/p/original/${info.detail.poster_path}`} alt="" />
@@ -124,7 +127,7 @@ const TvDetails = () => {
                     ))
                 ) : (
                     <h1 className="text-3xl text-white font-black text-center">Nothing To Show</h1>
-                )}
+                )} */}
             </div>
 
             {/* Part 5 Recommendation and Similar */}

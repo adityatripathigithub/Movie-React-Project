@@ -16,8 +16,8 @@ const HorizontalCards = ({ data }) => {
                             <h1 className=" text-xl font-semibold text-white">{d.original_name || d.name || d.title || d.original_title}</h1>
 
                             <p>
-                                {d.overview.slice(0, 50)}
-                                ...<span className="text-blue-400">more</span>{" "}
+                                {d.overview.slice(0, 50)}...<span className="text-blue-400">more</span>
+                                {/* {d.overview.slice(0, 50)}...<span className="text-blue-400">more</span> */}
                             </p>
                         </div>
                     </Link>

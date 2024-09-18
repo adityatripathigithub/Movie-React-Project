@@ -7,15 +7,14 @@ const initialState = {
 export const personSlice = createSlice({
     name: "movie",
     initialState,
-    reducers: {},
+    reducers: {
+        loadmovie: (state, action) => {
+            state.info = action.payload;
+        },
 
-    loadmovie: (state, action) => {
-        state.info = action.payload;
-    },
-
-    removemovie: (state, action) => {
-        state.info = null;
-        
+        removemovie: (state, action) => {
+            state.info = null;
+        },
     },
 });
 
