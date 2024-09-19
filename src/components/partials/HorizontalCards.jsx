@@ -17,7 +17,6 @@ const HorizontalCards = ({ data }) => {
 
                             <p>
                                 {d.overview.slice(0, 50)}...<span className="text-blue-400">more</span>
-                                {/* {d.overview.slice(0, 50)}...<span className="text-blue-400">more</span> */}
                             </p>
                         </div>
                     </Link>
