@@ -4,7 +4,7 @@ import { asynceloadetv, removetv } from "../store/actions/tvActions";
 import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import HorizontalCards from "./partials/HorizontalCards";
 import Loding from "./Loding";
-import { loadtv } from "../store/redusers/tvSlice";
+import { loadtv } from "../store/reducers/tvSlice";
 
 const TvDetails = () => {
     const { pathname } = useLocation();

@@ -5,19 +5,19 @@ const initialState = {
 };
 
 export const personSlice = createSlice({
-    name: "movie",
+    name: "person",
     initialState,
     reducers: {
-        loadmovie: (state, action) => {
+        loadperson: (state, action) => {
             state.info = action.payload;
         },
 
-        removemovie: (state, action) => {
+        removeperson: (state, action) => {
             state.info = null;
         },
     },
 });
 
-export const { loadmovie, removemovie } = personSlice.actions;
+export const { loadperson, removeperson,  } = personSlice.actions;
 
 export default personSlice.reducer;

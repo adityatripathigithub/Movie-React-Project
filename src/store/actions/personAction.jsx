@@ -1,8 +1,8 @@
-export { removeperson } from "../redusers/personSlice";
+export { removeperson } from "../reducers/personSlice";
 import axios from "../../utils/axios";
-import { loadperson } from "../redusers/personSlice";
+import {loadperson}  from "../reducers/personSlice";
 
-export const asynceloadeperson = (id) => async (dispatch, getstate) => {
+export const asyncloadeperson = (id) => async (dispatch, getstate) => {
     try {
         const detail = await axios.get(`/person/${id}`);
         const externalid = await axios.get(`/person/${id}/external_ids`);

@@ -36,7 +36,7 @@ const Home = () => {
         try {
             console.log("called");
             
-            const { data } = await axios.get(`https://api.themoviedb.org/3/trending/${category}/day`);
+            const { data } = await axios.get(`trending/${category}/day`);
             
             settranding(data.results);
         } catch (error) {
