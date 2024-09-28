@@ -2,7 +2,6 @@ export { removetv } from "../reducers/tvSlice";
 import axios from "../../utils/axios";
 import { loadtv } from "../reducers/tvSlice";
 
-
 export const asynceloadetv = (id) => async (dispatch) => {
     try {
         const detail = await axios.get(`/tv/${id}`);
@@ -22,7 +21,7 @@ export const asynceloadetv = (id) => async (dispatch) => {
             watchproviders: watchproviders.data.results.IN,
         };
 
-       dispatch(loadtv(theultimatedetails))
+        dispatch(loadtv(theultimatedetails));
         console.log(theultimatedetails);
     } catch (error) {
         console.log("Error: ", error);

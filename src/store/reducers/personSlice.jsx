@@ -18,6 +18,6 @@ export const personSlice = createSlice({
     },
 });
 
-export const { loadperson, removeperson,  } = personSlice.actions;
+export const { loadperson, removeperson } = personSlice.actions;
 
 export default personSlice.reducer;

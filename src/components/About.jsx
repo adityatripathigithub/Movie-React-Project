@@ -9,7 +9,8 @@ const About = () => {
                 </header>
                 <section className="mt-8 bg-zinc-900 p-6 rounded-lg shadow-lg">
                     <p className="text-gray-400 mb-4">
-                        Welcome to <strong className="text-zinc-300">Movie Application</strong>, a comprehensive source for discovering movies, TV shows, and entertainment content! We offer a vast, dynamic library of information for everything from blockbusters to indie films and binge-worthy series.
+                        Welcome to <strong className="text-zinc-300">Movie Application</strong>, a comprehensive source for discovering movies, TV shows, and entertainment content! We offer a vast, dynamic library of information for everything from blockbusters to indie films and binge-worthy
+                        series.
                     </p>
                     <h2 className="text-xl font-bold text-blue-900 mb-2">Our Purpose</h2>
                     <p className="text-gray-400 mb-4">
@@ -26,7 +27,7 @@ const About = () => {
                     <p className="text-gray-400 mb-4">We aim to create the most intuitive and informative platform for entertainment enthusiasts, helping you easily discover new content, track your favorites, and stay up-to-date on industry news.</p>
                     <h2 className="text-xl font-bold text-blue-900 mb-2">Community-Driven</h2>
                     <p className="text-gray-400 mb-4">
-                        <strong className="text-zinc-300" >Movie Application</strong> thrives on community participation. Join our user base to rate and review your favorite (or not-so-favorite) movies and shows, and engage with other fans.
+                        <strong className="text-zinc-300">Movie Application</strong> thrives on community participation. Join our user base to rate and review your favorite (or not-so-favorite) movies and shows, and engage with other fans.
                     </p>
                 </section>
             </div>

@@ -11,21 +11,18 @@ const Home = () => {
     // document.title = "SCSDB | Homepage";
 
     const [wallpaper, setwallpaper] = useState(null);
-    
+
     const [tranding, settranding] = useState([]);
     const [category, setcategory] = useState("all");
-    
-    
 
     const GetHeaderwallpaper = async () => {
-        
         try {
-            const { data } = await axios.get('https://api.themoviedb.org/3/trending/all/day');
+            const { data } = await axios.get("https://api.themoviedb.org/3/trending/all/day");
             console.log(data);
-            
+
             let rendomdata = data.results[(Math.random() * data.results.length).toFixed()];
             console.log(rendomdata);
-            
+
             setwallpaper(rendomdata);
         } catch (error) {
             console.log("Error: ", error);
@@ -35,20 +32,18 @@ const Home = () => {
     const Gettranding = async () => {
         try {
             console.log("called");
-            
+
             const { data } = await axios.get(`trending/${category}/day`);
-            
+
             settranding(data.results);
         } catch (error) {
             console.log("Error: ", error);
         }
     };
- useEffect(()=>{
+    useEffect(() => {
         Gettranding();
         !wallpaper && GetHeaderwallpaper();
-    
- },[category])
-  
+    }, [category]);
 
     return wallpaper && tranding ? (
         <>

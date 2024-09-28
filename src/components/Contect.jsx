@@ -25,7 +25,6 @@ const Contact = () => {
                     <p className="text-gray-400 mb-4">We value your feedback and suggestions. Feel free to reach out at:</p>
                     <p className="text-gray-400 font-bold">Email:</p>
                     <p className="text-gray-400">tripathiaditya163@gmail.com</p>
-
                 </section>
             </div>
         </div>

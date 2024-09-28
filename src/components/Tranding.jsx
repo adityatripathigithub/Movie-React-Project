@@ -14,7 +14,7 @@ const Tranding = () => {
     const [tranding, settranding] = useState([]);
     const [page, setpage] = useState(1);
     const [haseMore, sethaseMore] = useState(true);
-    document.title = "Tranding " + category.toLocaleUpperCase()
+    document.title = "Tranding " + category.toLocaleUpperCase();
 
     const GetTranding = async () => {
         try {

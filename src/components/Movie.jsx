@@ -47,7 +47,7 @@ const Movie = () => {
     return movie.length > 0 ? (
         <div className=" w-screen h-screen ">
             <div className="px-[5%] w-full  flex items center justify-center">
-                <h1  className="mt-4 text-2xl text-zinc-400 font-semibold">
+                <h1 className="mt-4 text-2xl text-zinc-400 font-semibold">
                     <i onClick={() => navigate(-1)} class="hover:text-[#6556CD] ri-arrow-left-line"></i>
                     Movie <small className="ml-2 text-sm text-zinc-300"> ({category})</small>
                 </h1>

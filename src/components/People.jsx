@@ -7,7 +7,6 @@ import Cards from "./partials/Cards";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const People = () => {
-
     const navigate = useNavigate();
     const [category, setcategory] = useState("popular");
     const [person, setperson] = useState([]);
@@ -15,13 +14,10 @@ const People = () => {
     const [haseMore, sethaseMore] = useState(true);
     document.title = "person";
     console.log(page);
-    
 
     const GetPerson = async () => {
         try {
             const { data } = await axios.get(`/person/${category}?page=${page}`);
-            
-            
 
             if (data.results.length > 0) {
                 setperson((prevstate) => [...prevstate, ...data.results]);
@@ -30,7 +26,7 @@ const People = () => {
                 sethaseperson(false);
             }
         } catch (error) {
-            console.log( error);
+            console.log(error);
         }
     };
 
@@ -53,7 +49,7 @@ const People = () => {
             <div className="px-[5%] w-full  flex items center justify-center">
                 <h1 onClick={() => navigate(-1)} className="mt-4 text-2xl text-zinc-400 font-semibold">
                     <i class="hover:text-[#6556CD] ri-arrow-left-line"></i>
-                    People 
+                    People
                 </h1>
                 <Topnav />
 
