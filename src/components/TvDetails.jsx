@@ -92,6 +92,7 @@ const TvDetails = () => {
                         ))}
                     </div>
                 )}
+                
 
                 {info.watchproviders && info.watchproviders.rent && (
                     <div className="flex items-center gap-x-10 text-white">
